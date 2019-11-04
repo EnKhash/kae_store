@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KAE Store - Registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="image/x-icon" href="logo/icon.ico"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+
+<header class="header">
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
+
+    <!--sidebar menu-->
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <center> 
+        <img src="logo/logoBlue.png" width="100" height="100" alt="logo" id="side-logo">
+        <a href="index.html">Home</a>
+        <a href="about_us.html">About</a>
+        <a href="contact.html">Contact</a>
+      </center>
+  </div>
+  
+  <div id="main">
+    <button class="openbtn" onclick="openNav()">&#9776;</button>
+  </div>
+  
+<!--logo-->
+    <a class="navbar-brand" href="index.html"> <img src="logo/logoBlue.png" alt="" height="80" width="80"> KAE.Store</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+  <!--Search bar-->
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-primary" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+</header>
+
+
+
+
+<!--content-->
+<!--Ali ALgarni & khalid maddah-->
+<div class="container">
+    <h1>Sign Up</h1>
+        <form id="register" class="main-form needs-validation" novalidate> 
+                      <!--first and last name-->
+                    <div class="row">
+                        <div class="col">
+                                 <div class="form-group">
+                                    <label for="firstName">First Name:</label>
+                                    <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                                    <div class="invalid-feedback">Please enter a first name</div>
+                                 </div>
+                        </div>
+
+                        <div class="col">
+                                <div class="form-group">
+                                    <label for="lastName">Last Name:</label>
+                                    <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                                    <div class="invalid-feedback">Please enter a last name</div>
+                                </div>
+                        </div>
+                     </div>  
+                     <!--gender-->
+                    <div class="form-group">
+                            <label for="inputGender">Gender:</label>
+                            <select id="inputGender" class="form-control">
+                                  <option  value="">--Select--</option>
+                                  <option  value="male">Male</option>
+                                  <option value="female">Female</option>
+                                  <option value="other">Other</option>  
+                            </select>
+                            <div class="invalid-feedback">Please choose a gender</div>
+                    </div>
+                    <!--username-->
+                    <div class="form-group">
+                        <label for="Username">Username:</label>
+                        <input type="text" class="form-control" id="username" placeholder="Username">
+                        <div class="invalid-feedback">Please enter a valid username</div>
+                    </div>
+
+                      <!--Email-->
+                    <div class="form-group">
+                        <label for="Email">Email address:</label>
+                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+                        <div id="email-err" class="invalid-feedback">Please enter a valid email address</div>
+                    </div>
+
+                      <!--password-->
+                     <div class="form-group">
+                         <label for="Password">Password:</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password" required minlength="7">
+                        <div id="err-pass" class="invalid-feedback">Your password must contain more than 6 characters</div>
+                     </div>
+                     <!--confirm password-->
+                     <div class="form-group">
+                            <label for="PasswordConfirm">Confirm Password:</label>
+                           <input type="password" class="form-control" id="PasswordConfirm" placeholder="Confirm Password" required minlength="7">
+                           <div id="confirm-pass-err" class="invalid-feedback"></div>
+                    </div>
+                     
+                
+                    <!--address 1-->
+                <div class="form-group">
+                        <label for="inputAddress">Address:</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="street, district">
+                        <div class="invalid-feedback">Please enter an address</div>
+                      </div>
+                      <!--address 2-->
+                      <div class="form-group">
+                        <label for="inputAddress2">Address 2:</label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                      </div>
+                      <!--country-->
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="inputCountry">Country:</label>
+                          <input type="text" class="form-control" id="inputCountry">
+                          <div class="invalid-feedback">Please enter a country</div>
+                        </div>
+                        <!--city-->
+                        <div class="form-group col-md-4">
+                          <label for="inputCity">City:</label>
+                          <select id="inputCity" class="form-control">
+                                <option  value="">--Select--</option>
+                                <option  value="Jeddah">Jeddah</option>
+                                <option value="Makkah">Makkah</option>
+                                <option value="Taif">Taif</option>
+                                <option value="Dammam">Dammam</option>
+                                <option value="Riyadh">Riyadh</option>
+                                <option value="Madina">Medina</option>
+                          </select>
+                          <div class="invalid-feedback">Please choose a city</div>
+                        </div>
+                        <!--zip code-->
+                        <div class="form-group col-md-2">
+                          <label for="inputZip">Zip</label>
+                          <input type="text" class="form-control" id="inputZip">
+                          <div class="invalid-feedback">Please enter your zip code</div>
+                        </div>
+                      </div>
+                          <!--submit button--> 
+                      <button type="submit" class="btn btn-outline-primary">Sign Up</button>
+                    </form>
+                    </div>
+<!--Ali ALgarni & khalid maddah-->
+
+
+
+<!--footer-->
+<div class="footer">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        
+        <a class="navbar-brand" href="index.html"><img src="logo/logoBlue.png" alt="" height="80" width="80"> KAE.Store</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about_us.html">About Us</a>
+            </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+
+           
+          </ul>
+        </div>
+      </nav>
+
+    </div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!--khalid maddah -->
+<script>
+
+/* Set the width of the sidebar to 300px and the left margin of the page content to 300px */
+function openNav() {
+  document.getElementById("mySidebar").style.width = "300px";
+  document.getElementById("main").style.marginLeft = "300px";
+}
+
+/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+
+
+function validateText(id)
+{
+   var div = $("#"+id).closest("input");
+   if( $("#"+id).val() == null || $("#"+id).val() == "")
+   {
+       
+       div.addClass(" is-invalid");
+       return false;
+   }
+   else
+   {
+        div.removeClass(" is-invalid");
+        div.addClass(" is-valid");
+        return true;
+   }
+
+}
+
+function confirmPass()
+{
+    if($("#PasswordConfirm").val() != $("#password").val())
+    {
+        $("#PasswordConfirm").addClass(" is-invalid");
+        $("#confirm-pass-err").html("Does not match");
+        return false;
+    }
+    else
+    {
+        $("#PasswordConfirm").removeClass(" is-invalid");
+        $("#PasswordConfirm").addClass(" is-valid");
+        return true;
+    }
+}
+
+
+$(document).ready(
+    function()
+    {
+        $('#register').submit(
+            
+            function()
+            {
+                if(!validateText("firstName"))
+                {
+                    return false;
+                }
+                if(!validateText("lastName"))
+                {
+                    return false;
+                }
+                if($("#inputGender").val() === "")
+                {
+                  $("#inputGender").addClass(" is-invalid");
+                  return false;
+                }
+                else
+                {
+                  $("#inputGender").removeClass(" is-invalid");
+                  $("#inputGender").addClass(" is-valid");
+                }
+                if(!validateText("username"))
+                {
+                    return false;
+                }
+                if(!validateText("email"))
+                {
+                    return false;
+                }
+
+                //check if email is valid
+                if(($("#email").val().indexOf('@') != -1 && $("#email").val().indexOf('.com') != -1))
+                {
+                  $("#email").removeClass(" is-invalid");
+                  $("#email").addClass(" is-valid");
+                }
+                else
+                {
+                  $("#email").addClass(" is-invalid");
+                  return false;
+                }
+
+                if(!validateText("password"))
+                {
+                    return false;
+                }
+                if(!validateText("PasswordConfirm"))
+                {
+                    return false;
+                }
+                if(!confirmPass())
+                {
+                    return false;
+                }
+                if(!validateText("inputAddress"))
+                {
+                    return false;
+                }
+                if(!validateText("inputCountry"))
+                {
+                    return false;
+                }
+                if($("#inputCity").val() === "")
+                {
+                  $("#inputCity").addClass(" is-invalid");
+                  return false;
+                }
+                else
+                {
+                  $("#inputCity").removeClass(" is-invalid");
+                  $("#inputCity").addClass(" is-valid");
+                }
+                if(!validateText("inputZip"))
+                {
+                    return false;
+                } 
+            }
+        );
+    }
+)
+
+          
+
+</script>
+
+<!--khalid maddah -->
+
+
+
+
+</body>
+</html>
