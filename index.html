@@ -107,9 +107,14 @@
   </div><br>
 <!--slider end-->
 
+<hr>
+
 <h1>Popular Items:</h1>
 
 <div class="row" id="cards">
+
+
+
   <!--item cards
     
     <div class="col-lg-4 col-md-6 mb-4">
@@ -190,9 +195,9 @@
               items[i] = items[j]
               items[j] = temp
             }
-          }//end for loop j
+          }//end for loop j 
         myhtml +=`
-                      <div class="col-lg-4 col-md-6 mb-4">
+                     <div class="col-lg-4 col-md-6 mb-4">
                       <div class="card h-100">
                         <a href="#"><img class="card-img-top" src="${items[i].img}" alt=""></a>
                         <div class="card-body">
@@ -201,12 +206,17 @@
                           </h4>
                           <h5>$${items[i].price}</h5>
                           <p class="card-text">${items[i].description}</p>
-                        </div>
+                         </div>
                         <div class="card-footer">
                           <small class="text-muted">Rating: ${items[i].rating}/5 (${items[i].boughtNum})</small>
                         </div>
                       </div>
-                    </div>`
+                     </div>`
+
+                    if(i == 2 || i == 5 || i == 8)
+                    {
+                      myhtml += `<hr>`
+                    }
                     
                 $("#cards").html(myhtml)
       }//end for loop i
