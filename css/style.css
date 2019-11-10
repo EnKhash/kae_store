@@ -90,14 +90,6 @@
     left: 15px;
   }
 
-.container
-{
-  margin-top: 100px;
-  min-height: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  overflow: auto;
-}
 .purple-border textarea {
   border: 1px solid #2111ff;
 }
@@ -110,3 +102,25 @@ hr
   border-color: #8c8b8b; 
   border-width: 0 0 2px 0; 
 }
+
+@media (min-width: 1200px) {
+  .container{
+      max-width: 1300px;
+      margin-top: 100px;
+      min-height: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      overflow: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .my-custom-container{
+    text-align: center;
+      width:1280px;
+      margin-top: 100px;
+  min-height: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  overflow: auto;
+  }}
