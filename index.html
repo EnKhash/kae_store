@@ -51,13 +51,9 @@
 
 </header>
 
-
-
-
 <!--content-->
 
 <!--slider-->
-
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
@@ -109,14 +105,17 @@
       </div>
     </div>
   </div><br>
-
 <!--slider end-->
 
-<!--item cards-->
+<h1>Popular Items:</h1>
 
-<div class="row">
+<div class="row" id="cards">
 
-  <div class="col-lg-4 col-md-6 mb-4">
+  
+
+  <!--item cards
+    
+    <div class="col-lg-4 col-md-6 mb-4">
     <div class="card h-100">
       <a href="#"><img class="card-img-top" src="products/Ps4/items/ps4_controller.jpg" alt=""></a>
       <div class="card-body">
@@ -131,98 +130,13 @@
       </div>
     </div>
   </div>
-
-  <div class="col-lg-4 col-md-6 mb-4">
-    <div class="card h-100">
-      <a href="#"><img class="card-img-top" src="products/Xbox/xbox-controller.jpg" alt=""></a>
-      <div class="card-body">
-        <h4 class="card-title">
-          <a href="#">Xbox One X Controller</a>
-        </h4>
-        <h5>$45.99</h5>
-        <p class="card-text">An Xbox One X controller</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">&#9733; &#9733; &#9733; &#9734; &#9734;</small>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6 mb-4">
-    <div class="card h-100">
-      <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-      <div class="card-body">
-        <h4 class="card-title">
-          <a href="#">Item Three</a>
-        </h4>
-        <h5>$24.99</h5>
-        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6 mb-4">
-    <div class="card h-100">
-      <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-      <div class="card-body">
-        <h4 class="card-title">
-          <a href="#">Item Four</a>
-        </h4>
-        <h5>$24.99</h5>
-        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6 mb-4">
-    <div class="card h-100">
-      <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-      <div class="card-body">
-        <h4 class="card-title">
-          <a href="#">Item Five</a>
-        </h4>
-        <h5>$24.99</h5>
-        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur! Lorem ipsum dolor sit amet.</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-lg-4 col-md-6 mb-4">
-    <div class="card h-100">
-      <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-      <div class="card-body">
-        <h4 class="card-title">
-          <a href="#">Item Six</a>
-        </h4>
-        <h5>$24.99</h5>
-        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur!</p>
-      </div>
-      <div class="card-footer">
-        <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
-      </div>
-    </div>
-  </div>
+-->
 
 </div>
 <!-- /.row -->
 
 </div>
-<!-- /.col-lg-9 -->
-
-</div>
-<!-- /.row -->
-
-</div>
-<!-- /.container -->
+<!-- /container -->
 
 
 <div class="footer">
@@ -236,8 +150,8 @@
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="about_us.html">About Us</a>
@@ -252,12 +166,65 @@
         </div>
       </nav>
 
-    </div>
+</div><!--close footer-->
 
 
 <script>
+  
+  $(document).ready(
+
+    function () {
+      
+      //access items json file
+      $.ajax({
+        type: 'GET',
+        url: 'https://api.npoint.io/3af81a627246c5206062',
+      }).done(function (items){
+        myhtml= ``
+        var topItems = 9
+        //display most bought items in store
+        for(i = 0; i < topItems; i++)
+        {
+          for(j = i+1; j < items.length; j++)
+          {
+            if(items[i].boughtNum < items[j].boughtNum)
+            {
+              var temp = items[i]
+              items[i] = items[j]
+              items[j] = temp
+            }
+          }//end for loop j
+        myhtml +=`
+                      <div class="col-lg-4 col-md-6 mb-4">
+                      <div class="card h-100">
+                        <a href="#"><img class="card-img-top" src="${items[i].img}" alt=""></a>
+                        <div class="card-body">
+                          <h4 class="card-title">
+                            <a href="#">${items[i].name}</a>
+                          </h4>
+                          <h5>$${items[i].price}</h5>
+                          <p class="card-text">${items[i].description}</p>
+                        </div>
+                        <div class="card-footer">
+                          <small class="text-muted">Rating: ${items[i].rating}/5 (${items[i].boughtNum})</small>
+                        </div>
+                      </div>
+                    </div>`
+                    
+                $("#cards").html(myhtml)
+      }//end for loop i
+
+      });//end .done(function (items){
+
+    }// end function () {
+
+  ) //end $(document).ready(
+  
+</script>
 
 
+<!--sidebar animation script-->
+<script>
 /* Set the width of the sidebar to 300px and the left margin of the page content to 300px */
 function openNav() {
   document.getElementById("mySidebar").style.width = "300px";
@@ -269,12 +236,9 @@ function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
   document.getElementById("main").style.marginLeft = "0";
 }
-
 </script>
 
-
-
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!--CDNs-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <!--Essam Khashoggi & khalid maddah--> 
