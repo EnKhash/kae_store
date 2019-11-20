@@ -190,7 +190,8 @@
       }).done(function (items){
         myhtml= ``
         var topItems = 9
-        //display most bought items in store
+        
+        //display most bought items in store using bubble sort
         for(i = 0; i < topItems; i++)
         {
           for(j = i+1; j < items.length; j++)
