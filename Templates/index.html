@@ -1,57 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>KAE Store - Home</title>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" type="image/x-icon" href="logo/icon.ico"/>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-</head>
-<body>
+{% extends 'layout.html' %}
 
-<!--Essam Khashoggi & khalid maddah--> 
-<header class="header">
 
-  
-
-    
-  <nav class="navbar navbar-expand-lg navbar-light bg-light"> 
-
-    <!--sidebar menu-->
-    <div id="mySidebar" class="sidebar">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <center> 
-        <img src="logo/logoBlue.png" width="100" height="100" alt="logo" id="side-logo">
-        <a href="registration.html">Registration</a>
-        <a href="about_us.html">About</a>
-        <a href="contact.html">Contact</a>
-      </center>
-  </div>
-  
-  <div id="main">
-    <button class="openbtn" onclick="openNav()">&#9776;</button>
-  </div>
-  
-<!--logo-->
-    <a class="navbar-brand" href="index.html"> <img src="logo/logoBlue.png" alt="" height="80" width="80"> KAE.Store</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-  <!--Search bar-->
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-primary" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
-
-</header>
-
-<!--content-->
+{% block body %}
 
 <!--slider-->
 <div class="container">
@@ -71,28 +21,28 @@
   
   <div class="carousel-inner" role="listbox">
       <div class="carousel-item active">
-          <img src="products/Ps4/ps4Pro.jpg" alt="ps4Pro">
+          <img src="/static/products/Ps4/ps4Pro.jpg" alt="ps4Pro">
           <div class="carousel-caption">
             <h1>Playstation 4 Pro</h1>
             <h5>Look at our Playstation-related products</h5>
           </div>
       </div>
       <div class="carousel-item">
-        <img src="products/Xbox/xboxone.jpg" alt="xboxone">
+        <img src="/static/products/Xbox/xboxone.jpg" alt="Xbox One">
           <div class="carousel-caption">
             <h1>Xbox One X</h1>
             <h5>Look at our Xbox-related products</h5>
           </div>
       </div>
       <div class="carousel-item">
-          <img src="products/PC/PC.jpg" alt="pc">
+          <img src="/static/products/PC/PC.jpg" alt="pc">
             <div class="carousel-caption">
               <h1>Gaming PC</h1>
               <h5>Look at our PC-related products</h5>
             </div>
          </div>
        <div class="carousel-item">
-          <img src="logo/enjoy-logo.jpg" alt="pc">
+          <img src="/static/logo/enjoy-logo.jpg" alt="enjoy">
          </div>
        </div>
        
@@ -147,34 +97,6 @@
 <!-- /container -->
 
 
-<div class="footer">
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        
-        <a class="navbar-brand" href="index.html"><img src="logo/logoBlue.png" alt="" height="80" width="80"> KAE.Store</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about_us.html">About Us</a>
-            </li>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact Us</a>
-          </li>
-
-           
-          </ul>
-        </div>
-      </nav>
-
-</div><!--close footer-->
 
 
 <script>
@@ -206,7 +128,7 @@
         myhtml +=`
                      <div class="col-lg-4 col-md-6 mb-4">
                       <div class="card h-100">
-                        <a href="#"><img class="card-img-top" src="${items[i].img}" alt=""></a>
+                        <a href="#"><img class="card-img-top" src="/static/${items[i].img}" alt=""></a>
                         <div class="card-body">
                           <h4 class="card-title">
                             <a href="#">${items[i].name}</a>
@@ -236,25 +158,5 @@
   
 </script>
 
+{% endblock %}
 
-<!--sidebar animation script-->
-<script>
-/* Set the width of the sidebar to 300px and the left margin of the page content to 300px */
-function openNav() {
-  document.getElementById("mySidebar").style.width = "300px";
-  document.getElementById("main").style.marginLeft = "300px";
-}
-
-/* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
-function closeNav() {
-  document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
-}
-</script>
-
-<!--CDNs-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<!--Essam Khashoggi & khalid maddah--> 
-</body>
-</html>
