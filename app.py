@@ -1,4 +1,4 @@
-from flask import Flask, session, render_template, url_for, request
+from flask import Flask, session, render_template, url_for, request, json
 
 app = Flask(__name__)
 
@@ -19,5 +19,11 @@ def about():
 @app.route("/contact")
 def contact():
     return render_template('contact.html', title='Contact Us')
+
+
+
+with open('kae_store/products.json') as f:
+  data = json.load(f)
+
 
 app.run(debug= True)
