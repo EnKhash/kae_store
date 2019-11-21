@@ -1,6 +1,7 @@
 # please write down all files that supposed 
 # to be ignored in Git
-# Sami
+# Author: Eng. Sami
 
+__pycache__
 .vscode
 *.lnk
