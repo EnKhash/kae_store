@@ -1,0 +1,6 @@
+# please write down all files that supposed 
+# to be ignored in Git
+# Sami
+
+.vscode
+*.lnk
