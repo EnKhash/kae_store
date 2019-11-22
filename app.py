@@ -46,6 +46,5 @@ def koko():
         products(i)
         print (i['name'])
 
-products(items['name'])
 
 app.run(debug= True)
