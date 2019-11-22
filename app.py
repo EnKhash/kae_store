@@ -30,21 +30,31 @@ with open('kae_store/products.json') as f:
   items = json.load(f)
 
 
-
 def products(items):
-    for i in range(9):
-        for j in range(i+1):
-            if items[i]['boughtNum'] > items[j]['boughtNum']:
+    for i in range(0,9):
+        for j in range(i+1, len(items)):
+            if items[i]['boughtNum'] < items[j]['boughtNum']:
                 temp = items[i]
                 items[i] = items[j]
                 items[j] = temp
-        print(i)
+        return """
+                <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100">
+                    <a href="#"><img class="card-img-top" src="/static/{{items[i]['img']}}" alt=""></a>
+                    <div class="card-body">
+                    <h4 class="card-title">
+                        <a href="#">{{items[i]['name']}}</a>
+                    </h4>
+                    <h5>${{items[i]['price']}}</h5>
+                    <p class="card-text">{{items[i]['description']}}</p>
+                    </div>
+                    <div class="card-footer">
+                    <small class="text-muted">Rating: {{items[i]['rating']}}/5 ({{items[i]['boughtNum']}})</small>
+                    </div>
+                </div>
+                </div>
+            """
 
-#loop through products in products.json
-def koko():
-    for i in items:
-        products(i)
-        print (i['name'])
 
 
 app.run(debug= True)
