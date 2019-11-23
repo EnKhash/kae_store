@@ -186,7 +186,7 @@
         "description": "The Xbox One X home console.",
         "img": "products/Xbox/items/xbox-one.jpg",
         "rating": 4.0,
-        "boughtNum": 400   
+        "boughtNum": 460   
     },
     {
         "type": "Xbox",
@@ -195,7 +195,7 @@
         "description": "The Xbox One X home console styled after the game Gears 5.",
         "img": "products/Xbox/items/xbox-one-gears.jpg",
         "rating": 4.1,
-        "boughtNum": 318  
+        "boughtNum": 400  
     },
     {
         "type": "PC",

@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route("/home")
 @app.route("/index")
 def index():
-    return render_template('index.html', title='Home')
+    return render_template('index.html', title='Home' , items=popItems)
 
 #Registrarion page
 @app.route("/registration")
@@ -29,31 +29,14 @@ def contact():
 with open('kae_store/products.json') as f:
   items = json.load(f)
 
+#sort items by boughtNum and store in popItems
+popItems = sorted(items, key= lambda i: i['boughtNum'], reverse=True)
 
-def products(items):
-    for i in range(0,9):
-        for j in range(i+1, len(items)):
-            if items[i]['boughtNum'] < items[j]['boughtNum']:
-                temp = items[i]
-                items[i] = items[j]
-                items[j] = temp
-        return """
-                <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card h-100">
-                    <a href="#"><img class="card-img-top" src="/static/{{items[i]['img']}}" alt=""></a>
-                    <div class="card-body">
-                    <h4 class="card-title">
-                        <a href="#">{{items[i]['name']}}</a>
-                    </h4>
-                    <h5>${{items[i]['price']}}</h5>
-                    <p class="card-text">{{items[i]['description']}}</p>
-                    </div>
-                    <div class="card-footer">
-                    <small class="text-muted">Rating: {{items[i]['rating']}}/5 ({{items[i]['boughtNum']}})</small>
-                    </div>
-                </div>
-                </div>
-            """
+
+#write popItems to popular-products.json
+with open('kae_store/popular-products.json', 'w') as p:
+    json.dump(popItems, p)
+
 
 
 
