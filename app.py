@@ -38,9 +38,9 @@ with open('popular-products.json', 'w') as p:
     json.dump(popItems, p)
 
 #item-discription page
-@app.route("/item-description/<string:name>/<float:price>/<string:desc>/<string:img>")
-def itemDesc(name, price, desc, img):
-    return render_template('item-description.html', name=name, title=name, price=price, desc=desc, img=img)
+@app.route("/item-description/<int:item_index>")
+def itemDesc(item_index):
+    return render_template('item-description.html', presented_item= items[item_index] )
 
 #load product.json file
 with open('products.json') as f:

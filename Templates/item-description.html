@@ -6,15 +6,15 @@
     <div class="row">
         <div class="col-sm-12">
 
-            <img src="{{img}}" alt="" style="width: 1280; height: 720;"><br><br>
+            <img src="{{itemIndex['img']}}" alt="" style="width: 1280; height: 720;"><br><br>
 
             <div class="col-sm-12">
-            <h3>{{ name }}</h3>
-            <h3>{{price}}</h3><br>
+            <h3>{{ itemIndex['name'] }}</h3>
+            <h3>{{ itemIndex['price'] }}</h3><br>
             <button class="btn btn-outline-primary">Add to cart</button><br><br>
 
             <h3>Discription:</h3>
-            <h5>{{ desc }}</h5>
+            <h5>{{ itemIndex['description'] }}</h5>
 
             <br>
           </div> 
