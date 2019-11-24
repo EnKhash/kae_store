@@ -4,16 +4,16 @@
         "name": "PS4 Pro Controller - Red",
         "price": 49.99,
         "description": "A red PS4 Pro controller.",
-        "img": "products/Ps4/items/ps4_controller.jpg",
+        "img": "static/products/Ps4/items/ps4_controller.jpg",
         "rating": 3.9,
-        "boughtNum": 200   
+        "boughtNum": 200 
     },
     {
         "type": "Xbox",
         "name": "Xbox One X Controller - Black",
         "price": 45.99,
         "description": "An Xbox One X controller.",
-        "img": "products/Xbox/items/xbox-controller.jpg",  
+        "img": "static/products/Xbox/items/xbox-controller.jpg",  
         "rating": 4.3,
         "boughtNum": 150  
     },
@@ -22,7 +22,7 @@
         "name": "Corsair 780T Full Tower PC Case",
         "price": 65.99,
         "description": "A full tower case for your gaming pc.",
-        "img": "products/PC/items/780t-full-tower.jpg",
+        "img": "static/products/PC/items/780t-full-tower.jpg",
         "rating": 4.4,
         "boughtNum": 50   
     },
@@ -31,7 +31,7 @@
         "name": "ASUS Gaming Mouse",
         "price": 36.99,
         "description": "A gaming mouse made by ASUS.",
-        "img": "products/PC/items/mouse.jpg",
+        "img": "static/products/PC/items/mouse.jpg",
         "rating": 4.2,
         "boughtNum": 142   
     },
@@ -40,7 +40,7 @@
         "name": "Xbox One Kinect",
         "price": 55.99,
         "description": "The Xbox One X Kinect, comes with two games.",
-        "img": "products/Xbox/items/xbox-kinect.jpg",
+        "img": "static/products/Xbox/items/xbox-kinect.jpg",
         "rating": 4.0,
         "boughtNum": 250   
     },
@@ -49,7 +49,7 @@
         "name": "Final Fantasy 7 Remake",
         "price": 59.99,
         "description": "The long awaited Final Fantasy 7 Remake for the Playstation 4.",
-        "img": "products/Ps4/items/ff7-ps4.jpg",
+        "img": "static/products/Ps4/items/ff7-ps4.jpg",
         "rating": 4.9,
         "boughtNum": 1500   
     },
@@ -58,7 +58,7 @@
         "name": "PS4 VR",
         "price": 75.99,
         "description": "The PS4 VR headset, comes with a PS4 camera and two VR games.",
-        "img": "products/Ps4/items/vr.jpg",
+        "img": "static/products/Ps4/items/vr.jpg",
         "rating": 4.8,
         "boughtNum": 199   
     },
@@ -67,7 +67,7 @@
         "name": "Fifa 20",
         "price": 59.99,
         "description": "The game Fifa 20 for the Playstation 4.",
-        "img": "products/Ps4/items/fifa20-ps4.jpg",
+        "img": "static/products/Ps4/items/fifa20-ps4.jpg",
         "rating": 2.9,
         "boughtNum": 30   
     },
@@ -76,7 +76,7 @@
         "name": "PS4 Controller - Black",
         "price": 45.99,
         "description": "The original PS4 Pro controller.",
-        "img": "products/Ps4/items/ps4_controller_black.jpg",
+        "img": "static/products/Ps4/items/ps4_controller_black.jpg",
         "rating": 4.1,
         "boughtNum": 201   
     },
@@ -85,7 +85,7 @@
         "name": "PS4 Platinum Headset",
         "price": 99.99,
         "description": "The platinum headset made by Sony for the Playstation 4 Pro.",
-        "img": "products/Ps4/items/ps4-platinum-headset.jpg",
+        "img": "static/products/Ps4/items/ps4-platinum-headset.jpg",
         "rating": 3.8,
         "boughtNum": 70   
     },
@@ -94,7 +94,7 @@
         "name": "Playstation 4 Pro - 1TB",
         "price": 399.99,
         "description": "The Playstation 4 Pro Home Console.",
-        "img": "products/Ps4/items/ps4-pro.jpg",
+        "img": "static/products/Ps4/items/ps4-pro.jpg",
         "rating": 4.7,
         "boughtNum": 518   
     },
@@ -103,7 +103,7 @@
         "name": "Resident Evil 2 Remake",
         "price": 59.99,
         "description": "The Resident Evil 2 Remake game for the Playstation 4.",
-        "img": "products/Ps4/items/re2-ps4.jpg",
+        "img": "static/products/Ps4/items/re2-ps4.jpg",
         "rating": 4.5,
         "boughtNum": 345   
     },
@@ -112,7 +112,7 @@
         "name": "Death Stranding",
         "price": 59.99,
         "description": "The long awaited Death Stranding game for the Playstation 4.",
-        "img": "products/Ps4/items/death-stranding-ps4.jpg",
+        "img": "static/products/Ps4/items/death-stranding-ps4.jpg",
         "rating": 5,
         "boughtNum": 2450   
     },
@@ -121,7 +121,7 @@
         "name": "Fifa 20",
         "price": 59.99,
         "description": "The game Fifa 20 for the Xbox One X.",
-        "img": "products/Xbox/items/fifa20-xbox.jpg",
+        "img": "static/products/Xbox/items/fifa20-xbox.jpg",
         "rating": 2.5,
         "boughtNum": 25   
     },
@@ -130,7 +130,7 @@
         "name": "Gears 5",
         "price": 59.99,
         "description": "The game Gears of War 5 for the Xbox One X.",
-        "img": "products/Xbox/items/gears5-xbox.jpg",
+        "img": "static/products/Xbox/items/gears5-xbox.jpg",
         "rating": 3.5,
         "boughtNum": 100   
     },
@@ -139,7 +139,7 @@
         "name": "Halo 5",
         "price": 59.99,
         "description": "The game Halo 5 for the Xbox One X.",
-        "img": "products/Xbox/items/halo5-xbox.jpg",
+        "img": "static/products/Xbox/items/halo5-xbox.jpg",
         "rating": 4.3,
         "boughtNum": 324   
     },
@@ -148,7 +148,7 @@
         "name": "Sekiro - Shadows Die Twice",
         "price": 59.99,
         "description": "The game Sekiro - Shadows Die Twice for the Playstation 4.",
-        "img": "products/Ps4/items/sekiro-ps4.jpg",
+        "img": "static/products/Ps4/items/sekiro-ps4.jpg",
         "rating": 4.7,
         "boughtNum": 598   
     },
@@ -157,7 +157,7 @@
         "name": "Sekiro - Shadows Die Twice",
         "price": 59.99,
         "description": "The game Sekiro - Shadows Die Twice for the Xbox One X.",
-        "img": "products/Xbox/items/sekiro-xbox.jpg",
+        "img": "static/products/Xbox/items/sekiro-xbox.jpg",
         "rating": 4.7,
         "boughtNum": 315   
     },
@@ -166,7 +166,7 @@
         "name": "Xbox One X Controller - Red",
         "price": 49.99,
         "description": "TheXbox One X red controller.",
-        "img": "products/Xbox/items/xbox-controller-red.jpg",
+        "img": "static/products/Xbox/items/xbox-controller-red.jpg",
         "rating": 4.1,
         "boughtNum": 245   
     },
@@ -175,7 +175,7 @@
         "name": "Xbox One X Controller - White",
         "price": 49.99,
         "description": "The Xbox One X white controller.",
-        "img": "products/Xbox/items/xbox-controller-white.jpg",
+        "img": "static/products/Xbox/items/xbox-controller-white.jpg",
         "rating": 4.1,
         "boughtNum": 245   
     },
@@ -184,7 +184,7 @@
         "name": "Xbox One X",
         "price": 499.99,
         "description": "The Xbox One X home console.",
-        "img": "products/Xbox/items/xbox-one.jpg",
+        "img": "static/products/Xbox/items/xbox-one.jpg",
         "rating": 4.0,
         "boughtNum": 460   
     },
@@ -193,7 +193,7 @@
         "name": "Xbox One X - Gears 5 Edition",
         "price": 499.99,
         "description": "The Xbox One X home console styled after the game Gears 5.",
-        "img": "products/Xbox/items/xbox-one-gears.jpg",
+        "img": "static/products/Xbox/items/xbox-one-gears.jpg",
         "rating": 4.1,
         "boughtNum": 400  
     },
@@ -202,7 +202,7 @@
         "name": "ASUS Monitor",
         "price": 1599.99,
         "description": "A Gaming Monitor made by ASUS.",
-        "img": "products/PC/items/asus-monitor.jpg",
+        "img": "static/products/PC/items/asus-monitor.jpg",
         "rating": 4.5,
         "boughtNum": 452   
     },
@@ -211,7 +211,7 @@
         "name": "Elgato 4k60 Pro",
         "price": 399.99,
         "description": "The Elgato 4k60 Pro device used to recored your console games.",
-        "img": "products/PC/items/elgato4k.jpg",
+        "img": "static/products/PC/items/elgato4k.jpg",
         "rating": 3.8,
         "boughtNum": 69   
     },
@@ -220,7 +220,7 @@
         "name": "Intel i9 Extreme",
         "price": 1999.99,
         "description": "Why have 2 kidneys when you can have the Intel i9 Extreme.",
-        "img": "products/PC/items/intel-i9.jpg",
+        "img": "static/products/PC/items/intel-i9.jpg",
         "rating": 4.6,
         "boughtNum": 420   
     },
@@ -229,7 +229,7 @@
         "name": "Razer - Blackwidow Chroma Kyeboard",
         "price": 199.99,
         "description": "The colorful Razer keyboard.",
-        "img": "products/PC/items/razer-blackwidow.jpg",
+        "img": "static/products/PC/items/razer-blackwidow.jpg",
         "rating": 4.6,
         "boughtNum": 15   
     },
@@ -238,7 +238,7 @@
         "name": "Razer - Kraken Pro",
         "price": 159.99,
         "description": "The Razer Kraken Pro headset.",
-        "img": "products/PC/items/razer-kraken-pro.jpg",
+        "img": "static/products/PC/items/razer-kraken-pro.jpg",
         "rating": 4.0,
         "boughtNum": 76   
     },
@@ -247,7 +247,7 @@
         "name": "Logitech Speakers",
         "price": 53.99,
         "description": "Logitech speakers for PC.",
-        "img": "products/PC/items/speakers-logitech.jpg",
+        "img": "static/products/PC/items/speakers-logitech.jpg",
         "rating": 3.4,
         "boughtNum": 153   
     },
@@ -256,7 +256,7 @@
         "name": "Steam Controller",
         "price": 69.99,
         "description": "A gaming PC controller made by Valve.",
-        "img": "products/PC/items/steam-controller.jpg",
+        "img": "static/products/PC/items/steam-controller.jpg",
         "rating": 2.4,
         "boughtNum": 48   
     },
@@ -265,7 +265,7 @@
         "name": "Titan X RTX",
         "price": 2599.99,
         "description": "Why have a functioning heart when you can have the Titan X RTX graphics card.",
-        "img": "products/PC/items/titanx-rtx.jpg",
+        "img": "static/products/PC/items/titanx-rtx.jpg",
         "rating": 4.8,
         "boughtNum": 42069   
     }

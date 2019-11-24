@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route("/home")
 @app.route("/index")
 def index():
-    return render_template('index.html', title='Home' , items=popItems)
+    return render_template('index.html', title='Home' , items=sorted(items, key= lambda i: i['boughtNum'], reverse=True))
 
 #Registrarion page
 @app.route("/registration")
@@ -25,19 +25,14 @@ def about():
 def contact():
     return render_template('contact.html', title='Contact Us')
 
+#item-discription page
+@app.route("/item-description/<string:name>/<float:price>/<string:desc>/<string:img>")
+def itemDesc(name, price, desc, img):
+    return render_template('item-description.html', name=name, title=name, price=price, desc=desc, img=img)
+
+
 #load product.json file
-with open('kae_store/products.json') as f:
+with open('products.json') as f:
   items = json.load(f)
-
-#sort items by boughtNum and store in popItems
-popItems = sorted(items, key= lambda i: i['boughtNum'], reverse=True)
-
-
-#write popItems to popular-products.json
-with open('kae_store/popular-products.json', 'w') as p:
-    json.dump(popItems, p)
-
-
-
 
 app.run(debug= True)
