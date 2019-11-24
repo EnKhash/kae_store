@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "type": "PS4",
         "name": "PS4 Pro Controller - Red",
         "price": 49.99,
@@ -9,6 +10,7 @@
         "boughtNum": 200 
     },
     {
+        "id": 2,
         "type": "Xbox",
         "name": "Xbox One X Controller - Black",
         "price": 45.99,
@@ -18,6 +20,7 @@
         "boughtNum": 150  
     },
     {
+        "id": 3,
         "type": "PC",
         "name": "Corsair 780T Full Tower PC Case",
         "price": 65.99,
@@ -27,6 +30,7 @@
         "boughtNum": 50   
     },
     {
+        "id": 4,
         "type": "PC",
         "name": "ASUS Gaming Mouse",
         "price": 36.99,
@@ -36,6 +40,7 @@
         "boughtNum": 142   
     },
     {
+        "id": 5,
         "type": "Xbox",
         "name": "Xbox One Kinect",
         "price": 55.99,
@@ -45,6 +50,7 @@
         "boughtNum": 250   
     },
     {
+        "id": 6,
         "type": "PS4",
         "name": "Final Fantasy 7 Remake",
         "price": 59.99,
@@ -54,6 +60,7 @@
         "boughtNum": 1500   
     },
     {
+        "id": 7,
         "type": "PS4",
         "name": "PS4 VR",
         "price": 75.99,
@@ -63,6 +70,7 @@
         "boughtNum": 199   
     },
     {
+        "id": 8,
         "type": "PS4",
         "name": "Fifa 20",
         "price": 59.99,
@@ -72,6 +80,7 @@
         "boughtNum": 30   
     },
     {
+        "id": 9,
         "type": "PS4",
         "name": "PS4 Controller - Black",
         "price": 45.99,
@@ -81,6 +90,7 @@
         "boughtNum": 201   
     },
     {
+        "id": 10,
         "type": "PS4",
         "name": "PS4 Platinum Headset",
         "price": 99.99,
@@ -90,6 +100,7 @@
         "boughtNum": 70   
     },
     {
+        "id": 11,
         "type": "PS4",
         "name": "Playstation 4 Pro - 1TB",
         "price": 399.99,
@@ -99,6 +110,7 @@
         "boughtNum": 518   
     },
     {
+        "id": 12,
         "type": "PS4",
         "name": "Resident Evil 2 Remake",
         "price": 59.99,
@@ -108,6 +120,7 @@
         "boughtNum": 345   
     },
     {
+        "id": 13,
         "type": "PS4",
         "name": "Death Stranding",
         "price": 59.99,
@@ -117,6 +130,7 @@
         "boughtNum": 2450   
     },
     {
+        "id": 14,
         "type": "Xbox",
         "name": "Fifa 20",
         "price": 59.99,
@@ -126,6 +140,7 @@
         "boughtNum": 25   
     },
     {
+        "id": 15,
         "type": "Xbox",
         "name": "Gears 5",
         "price": 59.99,
@@ -135,6 +150,7 @@
         "boughtNum": 100   
     },
     {
+        "id": 16,
         "type": "Xbox",
         "name": "Halo 5",
         "price": 59.99,
@@ -144,6 +160,7 @@
         "boughtNum": 324   
     },
     {
+        "id": 17,
         "type": "PS4",
         "name": "Sekiro - Shadows Die Twice",
         "price": 59.99,
@@ -153,6 +170,7 @@
         "boughtNum": 598   
     },
     {
+        "id": 18,
         "type": "Xbox",
         "name": "Sekiro - Shadows Die Twice",
         "price": 59.99,
@@ -162,6 +180,7 @@
         "boughtNum": 315   
     },
     {
+        "id": 19,
         "type": "Xbox",
         "name": "Xbox One X Controller - Red",
         "price": 49.99,
@@ -171,6 +190,7 @@
         "boughtNum": 245   
     },
     {
+        "id": 20,
         "type": "Xbox",
         "name": "Xbox One X Controller - White",
         "price": 49.99,
@@ -180,6 +200,7 @@
         "boughtNum": 245   
     },
     {
+        "id": 21,
         "type": "Xbox",
         "name": "Xbox One X",
         "price": 499.99,
@@ -189,6 +210,7 @@
         "boughtNum": 460   
     },
     {
+        "id": 22,
         "type": "Xbox",
         "name": "Xbox One X - Gears 5 Edition",
         "price": 499.99,
@@ -198,6 +220,7 @@
         "boughtNum": 400  
     },
     {
+        "id": 23,
         "type": "PC",
         "name": "ASUS Monitor",
         "price": 1599.99,
@@ -207,6 +230,7 @@
         "boughtNum": 452   
     },
     {
+        "id": 24,
         "type": "PC",
         "name": "Elgato 4k60 Pro",
         "price": 399.99,
@@ -216,6 +240,7 @@
         "boughtNum": 69   
     },
     {
+        "id": 25,
         "type": "PC",
         "name": "Intel i9 Extreme",
         "price": 1999.99,
@@ -225,6 +250,7 @@
         "boughtNum": 420   
     },
     {
+        "id": 26,
         "type": "PC",
         "name": "Razer - Blackwidow Chroma Kyeboard",
         "price": 199.99,
@@ -234,6 +260,7 @@
         "boughtNum": 15   
     },
     {
+        "id": 27,
         "type": "PC",
         "name": "Razer - Kraken Pro",
         "price": 159.99,
@@ -243,6 +270,7 @@
         "boughtNum": 76   
     },
     {
+        "id": 28,
         "type": "PC",
         "name": "Logitech Speakers",
         "price": 53.99,
@@ -252,15 +280,17 @@
         "boughtNum": 153   
     },
     {
+        "id": 29,
         "type": "PC",
         "name": "Steam Controller",
         "price": 69.99,
         "description": "A gaming PC controller made by Valve.",
         "img": "static/products/PC/items/steam-controller.jpg",
         "rating": 2.4,
-        "boughtNum": 48   
+        "boughtNum": 48 
     },
     {
+        "id": 30,
         "type": "PC",
         "name": "Titan X RTX",
         "price": 2599.99,
