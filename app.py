@@ -26,7 +26,7 @@ def contact():
     return render_template('contact.html', title='Contact Us')
 
 #load product.json file
-with open('kae_store/products.json') as f:
+with open('products.json') as f:
   items = json.load(f)
 
 #sort items by boughtNum and store in popItems
@@ -34,10 +34,14 @@ popItems = sorted(items, key= lambda i: i['boughtNum'], reverse=True)
 
 
 #write popItems to popular-products.json
-with open('kae_store/popular-products.json', 'w') as p:
+with open('popular-products.json', 'w') as p:
     json.dump(popItems, p)
 
 
+#about page
+@app.route("/items")
+def item_discription():
+    return render_template('item-discription.html', title='Item Discription', popItems=popItems)
 
 
 app.run(debug= True)
