@@ -75,7 +75,7 @@
     <a href="#"><img class="card-img-top" src="{{items[i]['img']}}" alt=""></a>
     <div class="card-body">
       <h4 class="card-title">
-        <a href="{{ url_for('itemDesc', item_index=presented_item) }}">{{items[i]['name']}}</a><!--passing image here-->
+        <a href="{{ url_for('itemDesc', item_index=i) }}">{{items[i]['name']}}</a><!--passing image here-->
       </h4>
       <h5>${{items[i]['price']}}</h5>
       <p class="card-text">${{items[i]['description']}}</p>
