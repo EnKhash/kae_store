@@ -26,6 +26,9 @@
       <center> 
         <img src="/static/logo/logoBlue.png" width="100" height="100" alt="logo" id="side-logo">
         <a href="/index">Home</a>
+        <a href="{{ url_for('item_list', item_type='PS4') }}" style="color: blue;">PS4 Items</a>
+        <a href="{{ url_for('item_list', item_type='Xbox') }}" style="color: green;">Xbox Items</a>
+        <a href="{{ url_for('item_list', item_type='PC') }}" style="color: red;">PC Items</a>
         <a href="/registration">Registration</a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
