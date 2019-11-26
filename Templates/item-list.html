@@ -13,7 +13,7 @@
     {% for i in item_type %}
     <div>
         <li class="list-group-item">
-          <img src="/{{i['img']}}" alt="" style="float:left; padding: 10px; widows: 350; height: 200;"><br><br>
+          <a href="{{ url_for('itemDesc', name= i['name'], price= i['price'], desc= i['description'])}}"><img src="/{{i['img']}}" alt="" style="float:left; padding: 10px; widows: 350; height: 200;"></a><br><br><br>
           <a href="{{ url_for('itemDesc', name= i['name'], price= i['price'], desc= i['description'])}}"><h3>{{i['name']}}</h3></a>
           <h4>Price: ${{i['price']}}</h4>
           <h5>{{i['description']}}</h5>

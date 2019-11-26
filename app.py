@@ -1,6 +1,27 @@
+#all Khalid Maddah
+
+
 from flask import Flask, session, render_template, url_for, request, json
+from flask_mail import Mail, Message
 
 app = Flask(__name__)
+
+app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
+app.config['MAIL_PORT'] = 785
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USE_SSL'] = False,
+app.config['MAIL_USERNAME'] = 'khaledmaddah1995@gmail.com'
+app.config['MAIL_PASSWORD'] = 'drgerthtrherhh'
+
+mail = Mail(app)
+
+#send mail
+@app.route('/send_email', methods=['POST'])
+def send_email():
+    user_email = request.form['usr_email']
+    msg = Message('We recieved your concerns', sender = 'noreply@demo.com', recipients = user_email)
+    msg.body = f''' Hello { user_email }, we have recieved your email and your concerns and we will get back to you in the next 48 hours'''
+    mail.send(msg)
 
 #error 404 page
 @app.errorhandler(404)
