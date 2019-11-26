@@ -7,21 +7,30 @@ from flask_mail import Mail, Message
 app = Flask(__name__)
 
 app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
-app.config['MAIL_PORT'] = 785
+app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USE_SSL'] = False,
 app.config['MAIL_USERNAME'] = 'khaledmaddah1995@gmail.com'
-app.config['MAIL_PASSWORD'] = 'drgerthtrherhh'
+app.config['MAIL_PASSWORD'] = 'remfzluosfocpopa'
+
 
 mail = Mail(app)
 
 #send mail
-@app.route('/send_email', methods=['POST'])
+@app.route('/', methods=['POST'])
 def send_email():
     user_email = request.form['usr_email']
-    msg = Message('We recieved your concerns', sender = 'noreply@demo.com', recipients = user_email)
-    msg.body = f''' Hello { user_email }, we have recieved your email and your concerns and we will get back to you in the next 48 hours'''
+    user_message = request.form['user_message']
+
+    #send user message to company email
+    usr_msg = Message('Customer - Contact Us', sender= f'{user_email}' , recipients= ['khaledmaddah1995@gmail.com'])
+    usr_msg.body = f'''{user_message}'''
+    mail.send(usr_msg)
+
+    #reply confirmation to user
+    msg = Message('We recieved your concerns', sender = 'noreply@demo.com', recipients = [user_email])
+    msg.body = f''' Hello { user_email }, we have recieved your email, we will get back to you in the next 48 hours'''
     mail.send(msg)
+    return index()
 
 #error 404 page
 @app.errorhandler(404)
@@ -29,24 +38,24 @@ def error(error):
     return render_template('error.html', title='Error 404'), 404
 
 #index page
-@app.route("/")
-@app.route("/home")
-@app.route("/index")
+@app.route('/')
+@app.route('/home')
+@app.route('/index')
 def index():
     return render_template('index.html', title='Home', items=popular_items(items), item_koko=items)
 
 #Registrarion page
-@app.route("/registration")
+@app.route('/registration')
 def registration():
     return render_template('registration.html', title='Registration')
 
 #about page
-@app.route("/about")
+@app.route('/about')
 def about():
     return render_template('about_us.html', title='About Us')
 
 #contact page
-@app.route("/contact")
+@app.route('/contact')
 def contact():
     return render_template('contact.html', title='Contact Us')
 
@@ -59,7 +68,7 @@ with open('products.json') as f:
 popItems = sorted(items, key= lambda i: i['boughtNum'], reverse=True)
 
 #item-discription page
-@app.route("/item-description/<name>/<price>/<desc>")
+@app.route('/item-description/<name>/<price>/<desc>')
 def itemDesc(name, price, desc):
     return render_template('item-description.html', name=name, price=price, desc=desc, title=name)
 
