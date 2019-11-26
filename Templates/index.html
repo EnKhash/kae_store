@@ -74,10 +74,11 @@
 
 <div class="col-lg-4 col-md-6 mb-4">
   <div class="card h-100">
-    <a href="{{ url_for('itemDesc', name= i['name'], price= i['price'], desc= i['description'])}}"><img class="card-img-top" src="{{i['img']}}" alt=""></a>
+    <a href="{{ url_for('itemDesc', name= i['name'], price= i['price'], desc= i['description'], img= i['img'], rating= i['rating'])}}">
+      <img class="card-img-top" src="{{i['img']}}" alt=""></a>
     <div class="card-body">
       <h4 class="card-title">
-        <a href="{{ url_for('itemDesc', name= i['name'], price= i['price'], desc= i['description'])}}">{{i['name']}}</a>
+        <a href="{{ url_for('itemDesc', name= i['name'], price= i['price'], desc= i['description'], img= i['img'], rating = i['rating'])}}">{{i['name']}}</a>
       </h4>
       <h5>${{i['price']}}</h5>
       <p class="card-text">${{i['description']}}</p>

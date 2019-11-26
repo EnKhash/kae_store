@@ -12,10 +12,9 @@ app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'khaledmaddah1995@gmail.com'
 app.config['MAIL_PASSWORD'] = 'remfzluosfocpopa'
 
-
 mail = Mail(app)
 
-#send mail
+#send email to user and company
 @app.route('/', methods=['POST'])
 def send_email():
     user_email = request.form['usr_email']
@@ -68,9 +67,9 @@ with open('products.json') as f:
 popItems = sorted(items, key= lambda i: i['boughtNum'], reverse=True)
 
 #item-discription page
-@app.route('/item-description/<name>/<price>/<desc>')
-def itemDesc(name, price, desc):
-    return render_template('item-description.html', name=name, price=price, desc=desc, title=name)
+@app.route('/item-description/<name>/<price>/<desc>/<path:img>/<rating>')
+def itemDesc(name, price, desc, img, rating):
+    return render_template('item-description.html', name=name, price=price, desc=desc, title=name, img=img, rating=rating)
 
 
 #item list page
