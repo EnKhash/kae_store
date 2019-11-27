@@ -81,7 +81,7 @@
         <a href="{{ url_for('itemDesc', name= i['name'], price= i['price'], desc= i['description'], img= i['img'], rating = i['rating'])}}">{{i['name']}}</a>
       </h4>
       <h5>${{i['price']}}</h5>
-      <p class="card-text">${{i['description']}}</p>
+      <p class="card-text">{{i['description']}}</p>
      </div>
     <div class="card-footer">
       <small class="text-muted">Rating: {{i['rating']}}/5 ({{i['boughtNum']}})</small>

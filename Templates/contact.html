@@ -61,16 +61,6 @@ $(document).ready(
             function()
             {
 
-                if(!validateText("contact"))
-                {
-                    $("#contact").addClass(" is-invalid");
-                    return false;
-                }
-                else
-                {
-                  $("#contact").removeClass(" is-invalid");
-                  $("#contact").addClass(" is-valid");
-                }
                 if(!validateText("email"))
                 {
                     return false;
@@ -85,6 +75,16 @@ $(document).ready(
                 {
                   $("#email").addClass(" is-invalid");
                   return false;
+                }
+                if(!validateText("contact"))
+                {
+                    $("#contact").addClass(" is-invalid");
+                    return false;
+                }
+                else
+                {
+                  $("#contact").removeClass(" is-invalid");
+                  $("#contact").addClass(" is-valid");
                 }
 
             }

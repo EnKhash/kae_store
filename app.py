@@ -59,7 +59,7 @@ def contact():
     return render_template('contact.html', title='Contact Us')
 
 #load product.json file
-with open('products.json') as f:
+with open('kae_store/products.json') as f:
   items = json.load(f)
 
 

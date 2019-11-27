@@ -11,16 +11,16 @@
 
   <ul class="list-group list-group-flush">
     {% for i in item_type %}
-    <div>
+    <div class="border border-primary">
         <li class="list-group-item">
           <a href="{{ url_for('itemDesc', name= i['name'], price= i['price'], desc= i['description'], img= i['img'], rating = i['rating'])}}">
-            <img src="/{{i['img']}}" alt="" style="float:left; padding: 10px; width: 350; height: 200;"></a><br><br><br>
+            <img src="/{{i['img']}}" alt="" style="float:left; padding: 10px; width: 350px; height: 200px;"></a><br>
           <a href="{{ url_for('itemDesc', name= i['name'], price= i['price'], desc= i['description'], img= i['img'], rating = i['rating'])}}"><h3>{{i['name']}}</h3></a>
           <h4>Price: ${{i['price']}}</h4>
           <h5>{{i['description']}} </h5>
           <h6>Ratings: {{i['rating']}}/5 ({{i['boughtNum']}})</h6>
         </li>
-     </div>
+     </div><br>
      {% endfor %}
   </ul>
 

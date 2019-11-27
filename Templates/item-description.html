@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-sm-12">
 
-            <img src="/{{ img }}" alt=""><br><br>
+            <img src="/{{ img }}" alt="" style="width: 1280px; height: 720px;"><br><br>
 
             <div class="col-sm-12">
             <h3>{{ name }}</h3>
@@ -14,7 +14,9 @@
             <button class="btn btn-outline-primary">Add to cart</button><br><br>
 
             <h3>Discription:</h3>
-            <h5>{{ desc }}</h5><br><br>
+            <div class="border border-primary" style="height: 500px; overflow-wrap: break-word;">
+            <h5>{{ desc }}</h5>
+          </div>
             <h6>Rating: {{ rating }}/5</h6>
 
             <br>
