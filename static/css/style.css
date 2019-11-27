@@ -6,10 +6,12 @@
     z-index: 1; /* Stay on top */
     top: 0;
     left: 0;
-    background-color: #111; /* Black*/
+    background-color: #f8f9fa; /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+    border: 1px solid blue;
+    opacity: 0;
   }
   
   /* The sidebar links */
@@ -17,14 +19,15 @@
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #6d6d6d;
     display: block;
     transition: 0.3s;
+    white-space: nowrap;
   }
 
   /* When you mouse over the navigation links, change their color */
   .sidebar a:hover {
-    color: #f1f1f1;
+    color:blue;
   }
 
   /* Position and style the close button (top right corner) */
@@ -47,7 +50,7 @@
   }
   
   .openbtn:hover {
-    background-color: rgb(163, 163, 163);
+    background-color: #5bdeff;
   }
   
   /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
