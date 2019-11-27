@@ -21,12 +21,12 @@
     display: block;
     transition: 0.3s;
   }
-  
+
   /* When you mouse over the navigation links, change their color */
   .sidebar a:hover {
     color: #f1f1f1;
   }
-  
+
   /* Position and style the close button (top right corner) */
   .sidebar .closebtn {
     position: absolute;
@@ -40,14 +40,14 @@
   .openbtn {
     font-size: 20px;
     cursor: pointer;
-    background-color: #acacac;
-    color: white;
+    background-color: #f8f9fa;
+    color: blue;
     padding: 10px 15px;
-    border: black;
+    border-color: blue;
   }
   
   .openbtn:hover {
-    background-color: #444;
+    background-color: rgb(163, 163, 163);
   }
   
   /* Style page content - use this if you want to push the page content to the right when you open the side navigation */

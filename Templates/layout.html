@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="/static/logo/icon.ico"/>
+    <script src="https://kit.fontawesome.com/becf989c77.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
@@ -26,31 +27,28 @@
       <center> 
         <img src="/static/logo/logoBlue.png" width="100" height="100" alt="logo" id="side-logo">
         <a href="/index">Home</a>
-        <a href="{{ url_for('item_list', item_type='PS4') }}" style="color: blue;">PS4 Items</a>
-        <a href="{{ url_for('item_list', item_type='Xbox') }}" style="color: green;">Xbox Items</a>
-        <a href="{{ url_for('item_list', item_type='PC') }}" style="color: red;">PC Items</a>
+        <a href="{{ url_for('item_list', item_type='PS4') }}" id="a-ps4">PS4 Items</a>
+        <a href="{{ url_for('item_list', item_type='Xbox') }}" id="a-xb">Xbox Items</a>
+        <a href="{{ url_for('item_list', item_type='PC') }}" id="a-pc">PC Items</a>
         <a href="/registration">Registration</a>
         <a href="/about">About</a>
         <a href="/contact">Contact</a>
       </center>
   </div>
-  
   <div id="main">
     <button class="openbtn" onclick="openNav()">&#9776;</button>
   </div>
   
 <!--logo-->
     <a class="navbar-brand" href="/index"> <img src="/static/logo/logoBlue.png" alt="" height="80" width="80"> KAE.Store</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+ 
   
   <!--Search bar-->
       <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="width: 2000px;">
         <button class="btn btn-outline-primary" type="submit">Search</button>
       </form>
-    </div>
+      <button type="button" class="btn btn-primary" style="margin-left:10px;"><i class="fas fa-shopping-cart" style="color:white; border-color: blue;"></i></button>
   </nav>
 
 </header>
@@ -99,13 +97,11 @@
 /* Set the width of the sidebar to 300px and the left margin of the page content to 300px */
 function openNav() {
   document.getElementById("mySidebar").style.width = "300px";
-  document.getElementById("main").style.marginLeft = "300px";
 }
 
 /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
 function closeNav() {
   document.getElementById("mySidebar").style.width = "0";
-  document.getElementById("main").style.marginLeft = "0";
 }
 
 </script>
