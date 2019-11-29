@@ -17,7 +17,7 @@ mail = Mail(app)
 #send email to user and company
 @app.route('/', methods=['POST'])
 def send_email():
-    user_email = request.form['usr_email']
+    user_email = request.form['user_email']
     user_message = request.form['user_message']
 
     #send user message to company email
