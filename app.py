@@ -26,7 +26,7 @@ def send_email():
     mail.send(usr_msg)
 
     #reply confirmation to user
-    msg = Message('We recieved your concerns', sender = 'noreply@demo.com', recipients = [user_email])
+    msg = Message('We recieved your concerns', sender = 'noreply@KAEstore.com', recipients = [user_email])
     msg.body = f''' Hello { user_email }, we have recieved your email, we will get back to you in the next 48 hours'''
     mail.send(msg)
     return index()
