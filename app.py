@@ -41,7 +41,7 @@ def error(error):
 @app.route('/home')
 @app.route('/index')
 def index():
-    return render_template('index.html', title='Home', items=popular_items(items), item_koko=items)
+    return render_template('index.html', title='Home', items=popular_items(items))
 
 #Registrarion page
 @app.route('/registration')
