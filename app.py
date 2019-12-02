@@ -59,7 +59,7 @@ def contact():
     return render_template('contact.html', title='Contact Us')
 
 #load product.json file
-with open('kae_store/products.json') as f:
+with open('products.json') as f:
   items = json.load(f)
 
 
@@ -99,7 +99,5 @@ def find_type(items, itype):
         elif(items[i]['type'] == 'PC' and itype == "PC"):
             yield items[i]
             json.dumps(items[i])
-
-
-
+            
 app.run(debug= True)
