@@ -111,7 +111,9 @@ app = Flask(__name__)
 
 from waitress import serve
 
-import osmyvar = os.environ.get('MYVAR')print ( myvar )
+import os
+myvar = os.environ.get('MYVAR')
+print ( myvar )
 
 
 if __name__ == '__main__':
