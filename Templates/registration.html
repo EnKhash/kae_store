@@ -172,7 +172,7 @@ $(document).ready(
                 {
                     return false;
                 }
-                if(document.getElementById("firstName").value.match(/[0-9]/))
+                if(document.getElementById("firstName").value.match(/[0-9]/)) //check if first name has numbers
                 {
                   $("#firstName").addClass(" is-invalid");
                   $("#fName-err").html("Please don't add numbers");
@@ -187,7 +187,7 @@ $(document).ready(
                 {
                     return false;
                 }
-                if(document.getElementById("lastName").value.match(/[0-9]/))
+                if(document.getElementById("lastName").value.match(/[0-9]/)) //check if last name has numbers
                 {
                   $("#lastName").addClass(" is-invalid");
                   $("#lName-err").html("Please don't add numbers");
@@ -232,7 +232,7 @@ $(document).ready(
                 {
                     return false;
                 }
-                if($("#password").val().length > 6)
+                if($("#password").val().length > 6) //chack if password is more or less than 6 characters
                 {
                   $("#password").removeClass(" is-invalid");
                   $("#password").addClass(" is-valid");
