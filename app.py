@@ -4,7 +4,7 @@ import os
 myvar = os.environ.get('MYVAR')
 print ( myvar )
 from flask import Flask, session, render_template, url_for, request, json
-from flask_mail import Mail, Message
+import flask_mail
 from waitress import Serve
 
 app = Flask(__name__)
