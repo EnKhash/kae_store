@@ -1,11 +1,14 @@
 #all Khalid Maddah
 
+
+
+from flask_mail import Mail, Message
 import os
-myvar = os.environ.get('MYVAR')
-print ( myvar )
-from Flask import Flask, session, render_template, url_for, request, json
-from Waitress import Serve
-from Flask-Mail import Mail, Message
+
+from flask import Flask, session, render_template, url_for, request, json
+
+from waitress import serve
+
 
 app = Flask(__name__)
 
@@ -105,8 +108,8 @@ def find_type(items, itype):
 
 
 if __name__ == '__main__':
-   #    print("-- DEBUG MODE ----")
-   # app.run(debug=True, port='5091')
+#    print("-- DEBUG MODE ----")
+#    app.run(debug=True, port='5091')
 
    print("--PRODUCTION MODE ---")
    p = os.environ.get('PORT')
