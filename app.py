@@ -2,7 +2,7 @@
 
 
 from flask import Flask, session, render_template, url_for, request, json
-from flask_mail import Mail, Message
+
 from waitress import serve
 
 
