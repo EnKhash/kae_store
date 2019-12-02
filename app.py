@@ -40,7 +40,8 @@ def send_email():
 #error 404 page
 @app.errorhandler(404)
 def error(error):
-    return render_template('error.html', title='Error 404')
+    return render_template('error.html', title='Error 404'), 404
+
 
 #index page
 @app.route('/')
