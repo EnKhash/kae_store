@@ -1,7 +1,7 @@
 #all Khalid Maddah
 
 
-from flask import Flask, session, render_template, url_for, request, json
+from flask import Flask, session, render_template, url_for, request, json, flask_mail
 
 
 
