@@ -99,5 +99,18 @@ def find_type(items, itype):
         elif(items[i]['type'] == 'PC' and itype == "PC"):
             yield items[i]
             json.dumps(items[i])
-            
-app.run(debug= True)
+
+# app.run(debug= True)
+import os
+from waitress import serve
+
+if __name__ == '__main__':
+   #    print("-- DEBUG MODE ----")
+   # app.run(debug=True, port='5091')
+
+   print("--PRODUCTION MODE ---")
+   p = os.environ.get('PORT')
+   if p == '' or p == None:
+       p = '5000'
+   print(p)
+   serve(app, host='0.0.0.0', port=p)
