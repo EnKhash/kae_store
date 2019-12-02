@@ -59,7 +59,7 @@ def contact():
     return render_template('contact.html', title='Contact Us')
 
 #load product.json file
-with open('kae_store/products.json') as f:
+with open('products.json') as f:
   items = json.load(f)
 
 
@@ -100,6 +100,17 @@ def find_type(items, itype):
             yield items[i]
             json.dumps(items[i])
 
+# app.run(debug= True)
+import os
+from waitress import serve
 
+if __name__ == '__main__':
+   #    print("-- DEBUG MODE ----")
+   # app.run(debug=True, port='5091')
 
-app.run(debug= True)
+   print("--PRODUCTION MODE ---")
+   p = os.environ.get('PORT')
+   if p == '' or p == None:
+       p = '5000'
+   print(p)
+   serve(app, host='0.0.0.0', port=p)
