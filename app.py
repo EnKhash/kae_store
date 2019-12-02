@@ -101,8 +101,18 @@ def find_type(items, itype):
             json.dumps(items[i])
 
 # app.run(debug= True)
+
 import os
+from flask import Flask
+
+app = Flask(__name__)
+
+# configure app code...
+
 from waitress import serve
+
+import osmyvar = os.environ.get('MYVAR')print ( myvar )
+
 
 if __name__ == '__main__':
    #    print("-- DEBUG MODE ----")
