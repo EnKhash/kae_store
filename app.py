@@ -4,7 +4,7 @@ import os
 myvar = os.environ.get('MYVAR')
 print ( myvar )
 from flask import Flask, session, render_template, url_for, request, json
-from flask_mail import mail, Message
+from flask_mail import Mail, Message
 from waitress import Serve
 
 app = Flask(__name__)
@@ -15,7 +15,7 @@ app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USERNAME'] = 'khaledmaddah1995@gmail.com'
 app.config['MAIL_PASSWORD'] = 'remfzluosfocpopa'
 
-mail = mail(app)
+mail = Mail(app)
 
 #send email to user and company
 @app.route('/', methods=['POST'])
