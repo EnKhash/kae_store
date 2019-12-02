@@ -1,8 +1,10 @@
 #all Khalid Maddah
 
 
-from flask import Flask, session, render_template, url_for, request, json
+from flask import Flask, session, render_template, url_for, request, json, os
 from flask_mail import Mail, Message
+from waitress import serve
+
 
 app = Flask(__name__)
 
@@ -100,15 +102,8 @@ def find_type(items, itype):
             yield items[i]
             json.dumps(items[i])
 
-# app.run(debug= True)
 
-import os
 
-# configure app code...
-
-from waitress import serve
-
-import os
 myvar = os.environ.get('MYVAR')
 print ( myvar )
 
