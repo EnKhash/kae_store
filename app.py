@@ -28,7 +28,7 @@ def send_email():
 
     #send user message to company email
     usr_msg = Message('Customer - Contact Us', sender= f'{user_email}' , recipients= ['khaledmaddah1995@gmail.com'])
-    usr_msg.body = f'''{user_message}'''
+    usr_msg.body = f'''{user_message} \n - {user_email}'''
     mail.send(usr_msg)
 
     #reply confirmation to user
@@ -66,7 +66,7 @@ def contact():
     return render_template('contact.html', title='Contact Us')
 
 #load product.jsoon file
-with open('./products.json') as f:
+with open('kae_store/products.json') as f:
   items = json.load(f)
 
 
@@ -109,12 +109,12 @@ def find_type(items, itype):
 
 
 if __name__ == '__main__':
-#    print("-- DEBUG MODE ----")
-#    app.run(debug=True, port='5091')
+    print("-- DEBUG MODE ----")
+    app.run(debug=True, port='5091')
 
-   print("--PRODUCTION MODE ---")
-   p = os.environ.get('PORT')
-   if p == '' or p == None:
-       p = '5000'
-   print(p)
-   serve(app, host='0.0.0.0', port=p)
+  # print("--PRODUCTION MODE ---")
+  # p = os.environ.get('PORT')
+  # if p == '' or p == None:
+   #    p = '5000'
+ #  print(p)
+  # serve(app, host='0.0.0.0', port=p)
