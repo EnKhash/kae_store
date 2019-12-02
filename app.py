@@ -1,6 +1,8 @@
 #all Khalid Maddah
 
 import os
+myvar = os.environ.get('MYVAR')
+print ( myvar )
 from flask import Flask, session, render_template, url_for, request, json
 from flask_mail import mail, Message
 from waitress import Serve
@@ -101,10 +103,6 @@ def find_type(items, itype):
             yield items[i]
             json.dumps(items[i])
 
-
-
-myvar = os.environ.get('MYVAR')
-print ( myvar )
 
 if __name__ == '__main__':
    #    print("-- DEBUG MODE ----")
