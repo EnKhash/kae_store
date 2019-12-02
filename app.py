@@ -103,9 +103,6 @@ def find_type(items, itype):
 # app.run(debug= True)
 
 import os
-from flask import Flask
-
-app = Flask(__name__)
 
 # configure app code...
 
@@ -114,7 +111,6 @@ from waitress import serve
 import os
 myvar = os.environ.get('MYVAR')
 print ( myvar )
-
 
 if __name__ == '__main__':
    #    print("-- DEBUG MODE ----")
@@ -125,4 +121,4 @@ if __name__ == '__main__':
    if p == '' or p == None:
        p = '5000'
    print(p)
-   serve(app, host='0.0.0.0', port=p)
+   serve(app, host='0.0.0.0', port='555')
