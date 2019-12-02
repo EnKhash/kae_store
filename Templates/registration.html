@@ -12,7 +12,7 @@
                                  <div class="form-group">
                                     <label for="firstName">First Name:</label>
                                     <input type="text" class="form-control" id="firstName" placeholder="First Name">
-                                    <div class="invalid-feedback">Please enter a first name</div>
+                                    <div id="fName-err" class="invalid-feedback">Please enter a first name</div>
                                  </div>
                         </div>
 
@@ -20,7 +20,7 @@
                                 <div class="form-group">
                                     <label for="lastName">Last Name:</label>
                                     <input type="text" class="form-control" id="lastName" placeholder="Last Name">
-                                    <div class="invalid-feedback">Please enter a last name</div>
+                                    <div id="lName-err" class="invalid-feedback">Please enter a last name</div>
                                 </div>
                         </div>
                      </div>  
@@ -52,7 +52,7 @@
                       <!--password-->
                      <div class="form-group">
                          <label for="Password">Password:</label>
-                        <input type="password" class="form-control" id="password" placeholder="Password" required minlength="7">
+                        <input type="password" class="form-control" id="password" placeholder="Password">
                         <div id="err-pass" class="invalid-feedback">Your password must contain more than 6 characters</div>
                      </div>
                      <!--confirm password-->
@@ -172,9 +172,31 @@ $(document).ready(
                 {
                     return false;
                 }
+                if(document.getElementById("firstName").value.match(/[0-9]/))
+                {
+                  $("#firstName").addClass(" is-invalid");
+                  $("#fName-err").html("Please don't add numbers");
+                  return false;
+                }
+                else
+                {
+                  $("#firstName").removeClass(" is-invalid");
+                  $("#firstName").addClass(" is-valid");
+                }
                 if(!validateText("lastName"))
                 {
                     return false;
+                }
+                if(document.getElementById("lastName").value.match(/[0-9]/))
+                {
+                  $("#lastName").addClass(" is-invalid");
+                  $("#lName-err").html("Please don't add numbers");
+                  return false;
+                }
+                else
+                {
+                  $("#firstName").removeClass(" is-invalid");
+                  $("#firstName").addClass(" is-valid");
                 }
                 if($("#inputGender").val() === "")
                 {
@@ -206,9 +228,19 @@ $(document).ready(
                   $("#email").addClass(" is-invalid");
                   return false;
                 }
-
                 if(!validateText("password"))
                 {
+                    return false;
+                }
+                if($("#password").val().length > 6)
+                {
+                  $("#password").removeClass(" is-invalid");
+                  $("#password").addClass(" is-valid");
+                }
+                else
+                {
+                    $("#password").addClass(" is-invalid");
+                    $("#pass-err").html("Password must be more than 6 characters");
                     return false;
                 }
                 if(!validateText("PasswordConfirm"))
