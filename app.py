@@ -66,7 +66,7 @@ def contact():
     return render_template('contact.html', title='Contact Us')
 
 #load product.jsoon file
-with open('kae_store/products.json') as f:
+with open('products.json') as f:
   items = json.load(f)
 
 
@@ -118,4 +118,3 @@ if __name__ == '__main__':
    #    p = '5000'
  #  print(p)
   # serve(app, host='0.0.0.0', port=p)
-  
